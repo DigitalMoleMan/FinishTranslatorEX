@@ -1,13 +1,13 @@
 {
-    "name": "Getting Started Example",
+    "name": "Finish Translator EX",
     "version": "1.0",
     "description": "Build an Extension!",
     "content_scripts": [
         {
             "matches": [
-                "http://*/*",
-                "https://*/*"
+                "*://*/*"
             ],
+            "all_frames": true,
             "js": [
                 "content.js"
             ],
