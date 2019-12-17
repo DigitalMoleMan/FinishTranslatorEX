@@ -1,7 +1,7 @@
 {
     "name": "Finish Translator EX",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Translates your web browser to 100% accurate Finish!",
     "content_scripts": [
         {
             "matches": [

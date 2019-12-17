@@ -9,15 +9,11 @@ const rules = [
     { replace: /a/gi, with: 'ai' },
     { replace: /e/gi, with: 'ei' },
     { replace: /meit/gi, with: 'saatana' },
-    { replace: /jaikk/gi, with: 'saatana' }
+    { replace: /jaikk/gi, with: 'saatana' },
+    { replace: /är /gi, with: 'perkele' },
+    { replace: /kkk/gi, with: 'kk' },
+    { replace: /kkkk/gi, with: 'kk' },
+    { replace: /20/gi, with: '19' },
 ]
-
-var elements = document.querySelectorAll('h1, h2, h3, h4, h5, p, b, a, li, td, caption, span, label, button, input');
-
-for (let e of elements) {
-    let baseURI = e.baseURI;
-    for (let r of rules) {
-        e.innerText = e.innerText.replace(r.replace, r.with);
-    }
-    e.baseURI = baseURI;
-}
+let elements = document.querySelectorAll('h1, h2, h3, h4, h5, p, b, a, li, td, th, caption, span, label, button, input');
+for (let e of elements) for (let r of rules) e.innerText = e.innerText.replace(r.replace, r.with);
